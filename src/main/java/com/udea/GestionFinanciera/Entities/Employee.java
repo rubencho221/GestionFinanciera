@@ -21,18 +21,17 @@ public class Employee {
     @Column
     private Date createdAt;
 
-    @OneToOne()
-    private Profile profile;
+    /*@OneToOne()
+    private Profile profile;*/
 
     public Employee() {
     }
 
-    public Employee(Long id, String email, Date updateAt, Date createdAt, Profile profile) {
+    public Employee(Long id, String email, Date updateAt, Date createdAt) {
         this.id = id;
         this.email = email;
         this.updateAt = updateAt;
         this.createdAt = createdAt;
-        this.profile = profile;
     }
 
     public String getEmail() {
@@ -59,11 +58,4 @@ public class Employee {
         this.createdAt = createdAt;
     }
 
-    public Profile getProfile() {
-        return profile;
-    }
-
-    public void setProfile(Profile profile) {
-        this.profile = profile;
-    }
 }

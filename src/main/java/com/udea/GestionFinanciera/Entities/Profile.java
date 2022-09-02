@@ -23,19 +23,18 @@ public class Profile {
     @Column
     private Date updatedAt;
 
-    @OneToOne(mappedBy = "profile")
-    private Employee employee;
+    /*@OneToOne(mappedBy = "profile")
+    private Employee employee;*/
 
     public Profile() {
     }
 
-    public Profile(Long id, String image, String phone, Date createdAt, Date updatedAt, Employee employee) {
+    public Profile(Long id, String image, String phone, Date createdAt, Date updatedAt) {
         this.id = id;
         this.image = image;
         this.phone = phone;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
-        this.employee = employee;
     }
 
     public String getImage() {
@@ -68,13 +67,5 @@ public class Profile {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
     }
 }
